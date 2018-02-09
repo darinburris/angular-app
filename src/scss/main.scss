@@ -1,43 +1,14 @@
 // @import './node_modules/bourbon/app/assets/stylesheets/_bourbon';
 // @import './node_modules/bourbon-neat/core/_neat';
 
-@import './node_modules/node-neat/node_modules/bourbon-neat/core/_neat';
+// @import './node_modules/node-neat/node_modules/bourbon-neat/core/_neat';
 @import 'options/variables';
 
 $medium-screen-big: '(min-width: 737px)';
 $medium-screen-little: '(max-width: 1199px)';
 $desktop-up: '(min-width: 1200px)';
 
-$neat-grid: (
-	columns: 12,
-	gutter: 10px
-);
-
-$custom-grid: (
-	columns: 6,
-	gutter: 10px
-);
-
-//For styles tablet all the way up to desktop
-$tablet-screen-up: (
-	media: $medium-screen-big
-);
-
-//For styles in between tablet and desktop
-$desktop-screen-down: (
-	media: $medium-screen-little
-);
-
-//For styles in between tablet and desktop
-$desktop-screen-up: (
-	media: $desktop-up
-);
-
 h1 {
-
-	@include grid-media($tablet-screen-up) {
-        font-size: 102px !important;
-    }
 
     color: $testy;
     font-size: 22px !important;
@@ -45,44 +16,19 @@ h1 {
 }
 
 body {
-    @include grid-container;
 
 }
 
 main {
-
-    @include grid-collapse;
-
-	@include grid-media($tablet-screen-up) {
-		width: 100%;
-    }
-
-	@include grid-media($desktop-screen-up) {
-        width: 1000px;
-	}
 
 	margin: 0 auto;
     width: 90%;
 
     div {
 
-        &.one {
+        &.one {}
 
-            @include grid-media($tablet-screen-up) {
-                @include grid-column(2);
-            }
-
-        }
-
-        &.two {
-
-            @include grid-media($tablet-screen-up) {
-                @include grid-column(10);
-            }
-
-        }
-
-
+        &.two {}
 
         border: 1px solid red;
 
